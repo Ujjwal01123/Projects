@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.con{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(238, 236, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con_child{
+    padding: 25px;
+    min-height: 450px;
+    width: 340px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.con .con_child ._nav{
+    width: 100%;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Arial;
+    color:rgb(49, 49, 217) ;
+    text-align: center;
+    font-family: cursive;
+}
+.con .con_child .form{
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    outline: none;
+}
+.con .con_child .form span{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.con .con_child .form select{
+    outline: none;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: cursive;
+    background-color: rgba(234, 233, 233, 0.408);
+    border: none;
+}
+.con .con_child .form input{
+    padding: 10px 15px;
+    font-size: 15px;
+    background-color: rgba(234, 233, 233, 0.408);
+    border: none;
+}
+.con .con_child .form button{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: cursive;
+    padding: 5px;
+    background-color: rgb(68, 220, 142);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(59, 186, 120);
+    }
+}
+.con .con_child .result_box{
+    width: 100%;
+}
+.con .con_child .result_box .r_box1{
+    height: 20px;
+    font-size: 18px;
+}
+.con .con_child .result_box .r_box2{
+    font-size: 18px;
+    margin-top: 5px;
+    background-color: rgba(234, 233, 233, 0.408);
+    padding: 10px;
+}
+.con .con_child .form .img_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#rs_value{
+    float: right;
+}
