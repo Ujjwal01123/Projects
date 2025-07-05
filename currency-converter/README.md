@@ -53,7 +53,7 @@ You will need to integrate this API key into your JavaScript code where the API 
 
 Open index.html: Simply open the index.html file in your preferred web browser.
 
-#💡 Usage
+# 💡 Usage
 Select the "From" currency from the first dropdown.
 
 Enter the amount you wish to convert in the input field.
