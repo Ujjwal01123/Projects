@@ -41,7 +41,7 @@ git clone https://github.com/Ujjwal01123/Projects
 
 Navigate to the project directory:
 
-cd projects/
+cd projects/tree/main/stop-watch-project
 
 Open index.html: Simply open the index.html file in your preferred web browser.
 
