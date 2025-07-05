@@ -41,7 +41,7 @@ git clone https://github.com/Ujjwal01123/Projects
 
 Navigate to the project directory:
 
-cd projects/currency-converter
+cd projects/tree/main/currency-converter
 
 Obtain an API Key (if required):
 
