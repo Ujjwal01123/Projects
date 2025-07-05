@@ -31,7 +31,7 @@ git clone https://github.com/Ujjwal01123/Projects
 
 Navigate to the project directory:
 
-cd projects/joke-danger-meter 
+cd projects/tree/main/joke%20danger%20meter 
 
 Open index.html: Simply open the index.html file in your preferred web browser.
 
