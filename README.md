@@ -27,11 +27,11 @@ JavaScript
 ## 🚀 Getting Started
 Clone the repository:
 
-git clone https://github.com/your-username/projects.git
+git clone https://github.com/Ujjwal01123/Projects
 
 Navigate to the project directory:
 
-cd projects/joke-danger-meter  # Assuming 'joke-danger-meter' is the specific folder for this project
+cd projects/joke-danger-meter 
 
 Open index.html: Simply open the index.html file in your preferred web browser.
 
