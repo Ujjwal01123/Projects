@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOKE DANGER METER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="mainbox">
+        <div class="left">
+            <h3>Jail meter</h3>
+            <div class="levelout"><div class="level"><div id="lev"></div></div></div>
+        </div>
+        <div class="right">
+            <h1>Joke Danger Meter</h1>
+            <h5>Find out if your joke is safe or offensive</h5>
+            <div class="ques">
+                <h3>Is your joke about a polotical party?</h3>
+                <span>
+                <button class="no" id="no1" onclick="">No</button>
+                <button class="yes" id="yes1" onclick="">Yes</button>
+                </span>
+            </div>
+            <div class="ques">
+                <h3>Does your joke involve religion?</h3>
+                <span>
+                <button class="no" id="no2" onclick="">No</button>
+                <button class="yes" id="yes2" onclick="">Yes</button>
+                </span>
+            </div>
+            <div class="ques">
+                <h3>Is it a dark humor joke?</h3>
+                <span>
+                <button class="no" id="no3" onclick="">No</button>
+                <button class="yes" id="yes3" onclick="">Yes</button>
+                </span>
+            </div>
+            <div class="ques">
+                <h3>Does it target a specific gender?</h3>
+                <span>
+                <button class="no" id="no4" onclick="">No</button>
+                <button class="yes" id="yes4" onclick="">Yes</button>
+                </span>
+            </div>
+            <div class="ques">
+                <h3>Is your joke about someone's mom/dad?</h3>
+                <span>
+                <button class="no" id="no5" onclick="">No</button>
+                <button class="yes" id="yes5" onclick="">Yes</button>
+                </span>
+            </div>
+            <div class="ques">
+                <h3>Is it a joke about a taboo topic?</h3>
+                <span>
+                <button class="no" id="no6" onclick="">No</button>
+                <button class="yes" id="yes6" onclick="">Yes</button>
+                </span>
+            </div>
+            <button id="btn">Check Result</button>
+        </div>
+
+    </div>
+    <div class="result_box hide" id="boxmode">
+        <img src="green-tick.png" width="100px">
+        <h1>Submitted!</h1>
+        <h3>Chance of Jail : <span id="resValue"></span></h3>
+        <h5 style="text-align: center;">Thanks for playing with us.I hope you<br> enjoyed this web application.</h5>
+        <button id="okay">Okay</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
