@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image"
+        href="https://www.freepnglogos.com/uploads/camera-logo-png/camera-logo-download-clipart-24.png">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://editzstock.com/wp-content/uploads/2022/05/Phoro-editing-logo-2-1024x1024.png" height="80px">
+            Img<span style="color: rgba(119, 89, 219, 0.831);">&nbsp;Compressor</span>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="start">
+        <div class="ll">
+            <img src="https://editzstock.com/wp-content/uploads/2022/05/Phoro-editing-logo-2-1024x1024.png"
+                style="height: 50vh; margin-top: 50px; filter: drop-shadow(0 0 10px gray);">
+        </div>
+        <div class="rr">
+            <div class="rrchild">
+                <marquee direction="left">
+                    <h1>A perfect example of Image Editor in which we can resize images and also reduce the quality of
+                        images.</h1>
+                </marquee>
+                <hr>
+            </div>
+            <button id="start"><a href="#gtstr">Get Started</a></button>
+        </div>
+    </div>
+
+
+    <div class="start1" id="gtstr">
+        <div class="rr1">
+            <img src="https://editzstock.com/wp-content/uploads/2022/05/Phoro-editing-logo-2-1024x1024.png"
+                style="height: 40vh; margin-left:20px; margin-top: 50px; filter: drop-shadow(0 0 10px gray);">
+            <div>
+                <h1 style="text-align: center;">Select and Edit</h1>
+                <p>It is easy to use and also user friendly.</p>
+            </div>
+        </div>
+        <div class="ll1">
+            <div class="container">
+                <div class="img-section" id="imgbox">
+                    <input id="imgs" type="file" accept="image/*" hidden>
+                    <img src="upload.png" width="80px" alt="img">
+                    <label>Browse File to Upload</label>
+                </div>
+                <div class="base">
+                    <div class="right">
+                        <label for="width">Width</label>
+                        <input type="number" id="width">
+                        <span>
+                            <input type="checkbox" id="ratio" checked>
+                            <label for="ratio">Lock aspect ratio</label>
+                        </span>
+                    </div>
+                    <div class="left">
+                        <label for="height">Height</label>
+                        <input type="number" id="height">
+                        <span>
+                            <input type="checkbox" id="qual">
+                            <label for="qual">Reduce quality</label>
+                        </span>
+                    </div>
+                </div>
+                <input type="button" id="btn" value="Download Image">
+            </div>
+        </div>
+        
+    </div>
+
+    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
