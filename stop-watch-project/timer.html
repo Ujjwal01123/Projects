@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="time.css">
+</head>
+
+<body>
+    <div class="home" id="homeid">
+    <h1>Stop watch</h1>
+    <div class="box">
+        <div class="left">
+            <button id="hrsplus">+</button>
+            <div class="cen" id="hrstxt">0</div>
+            <button id="hrsminus">-</button>
+            <span>Hours</span>
+        </div>
+        <div class="center">
+            <button id="minplus">+</button>
+            <div class="cen" id="mintxt">0</div>
+            <button id="minminus">-</button>
+            <span>Minutes</span>
+        </div>
+        <div class="right">
+            <button id="secplus">+</button>
+            <div class="cen" id="sectxt">0</div>
+            <button id="secminus">-</button>
+            <span>Seconds</span>
+        </div>
+    </div>
+    <button class="btn" onclick="countdown()">START</button>
+    </div>
+    <div class="timeover hide" id="toverid">
+        <img src="https://www.pngkey.com/png/full/129-1296729_alert-icon-png.png" height="120px">
+        <span>Time Up</span>
+    </div>
+
+    <script src="time.js"></script>
+</body>
+
+</html>
