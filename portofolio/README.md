@@ -38,7 +38,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/Ujjwal01123/Projects/tree/main/portofolio
 Navigate to the project directory:
 
 Bash
@@ -65,4 +65,4 @@ Open a Pull Request 🤝
 Contact
 Your Name - uvrays1232@gmail.com 📧
 
-Project Link: https://github.com/your-username/your-portfolio 🔗
+Project Link: https://github.com/Ujjwal01123/Projects/tree/main/portofolio 🔗
