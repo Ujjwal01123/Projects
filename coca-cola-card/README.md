@@ -33,7 +33,7 @@ Clone the repository:
 
 Bash
 
-git clone https://github.com/your-username/coca-cola-hover-card.git
+git clone https://github.com/Ujjwal01123/Projects/tree/main/coca-cola-card
 Navigate to the project directory:
 
 Bash
@@ -72,6 +72,6 @@ Open a Pull Request 🤝
 Distributed under the MIT License. See LICENSE for more information. 📜
 
 Contact
-Your Name - your.email@example.com 📧
+Your Name - uvrays1232@gmail.com 📧
 
-Project Link: https://github.com/your-username/coca-cola-hover-card 🔗
+Project Link: https://github.com/Ujjwal01123/Projects/tree/main/coca-cola-card 🔗
