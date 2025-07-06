@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(20, 17, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    width: 300px;
+    height: 300px;
+}
+.card .circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: rgb(20, 17, 17);
+    border: 5px solid red;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 30px red);
+}
+.card .circle img{
+    width: 260px;
+}
+.card .content{
+    visibility: hidden;
+    position: absolute;
+    font-size: 35px;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+    transform: scale(0);
+    filter: drop-shadow(0 0 8px black);
+}
+.card:hover .content{
+    visibility: visible;
+    transform: scale(1);
+    transition: 0.5s ease-in;
+}
+.card .cola{
+    height: 380px;
+    position: relative;
+    left: 330px;
+    visibility: hidden;
+    bottom: 90px;
+    transform: scale(0)rotate(-65deg);
+    filter: drop-shadow(0 0 10px Black)drop-shadow(0 0 20px rgb(36, 30, 30));
+}
+.card:hover .cola{
+    visibility: visible;
+    transform: scale(1)rotate(15deg);
+    transition: 0.5s ease-in-out;
+}
+.card:hover .circle{
+    width: 500px;
+    border-radius: 20px;
+    background-color: red;
+    transition: 0.5s ease-in-out;
+}
+.card:hover .logo{
+    visibility: hidden;
+    transform: scale(0)rotate(65deg);
+    transition: 0.5s ease-in-out;
+}
+.card .content{
+    display: flex;
+    justify-self: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.card .content button{
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 500;
+    padding: 5px;
+    font-family: Arial Black;
+    border-radius: 25px;
+    border: none;
+}
+.card .content button:hover{
+    background-color: rgb(29, 28, 28);
+    color: white;
+    transition: 0.5s;
+}
