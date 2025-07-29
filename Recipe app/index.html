@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- search part -->
+    <div class="container">
+        <h2>Recipe Book</h2>
+        <p>Search mouth watering recipe to satisfy your craving</p>
+        <div class="searchBox">
+            <input type="text" placeholder="search recipe" id="searchInput">
+            <button onclick="searchRecipes()">Search</button>
+        </div>
+    </div>
+    <!-- nav area -->
+    <nav>
+        <label onclick="window.location.reload()">RecipeBook.chef</label>
+        <ul>
+            <li><a onclick="window.location.reload()">Home</a></li>
+            <li><a href="https://studypeaks.netlify.app/port">About</a></li>
+            <li><a href="mailto:recipebook@gmail.com">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- recipes card container -->
+    <div class="recipes" id="recipes"></div>
+    <!-- not found container -->
+    <div class="notfound" id="notfound">
+        Search your favorite recipes
+    </div>
+    <!-- view recipes box -->
+    <div class="popup-card" id="popupCard">
+        <button class="close" onclick="closeRecipe()">❌</button>
+        <h3 id="recipeTitle"></h3>
+        <h3>Ingredients:</h3>
+        <ul id="list"></ul>
+        <h3>Ingredients measures:</h3>
+        <ul id="list2"></ul>
+        <h3>Instruction</h3>
+        <p id="recipeDetails"></p>
+        <h3>🔗Youtube link :<span id="ytlink"></span></h3>
+        <h2>Thats all</h2>
+        <p id="ujjwal">Created By Ujjwal Sharma</p>
+    </div>
+
+    <!-- footer area -->
+    <footer>
+        <h3>Created By Ujjwal Sharma</h3>
+        <p>This project is Created by <a id="port" href="https://studypeaks.netlify.app/port">Ujjwal Sharma</a></p>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
