@@ -1,11 +1,27 @@
 const express = require("express");
 const router = express.Router();
-const Orders = require("../models/orders");
 
-router.route(`/`).get(async (req, res) => {
-  const orderList = await Orders.find();
-  if (!orderList) return res.status(500).json({ success: false });
-  res.send(orderList);
-});
+const {
+  HandleGetAllOrders,
+  HandleAddNewOrders,
+  HandleGetOrdersById,
+  HandleUpdateOrdersById,
+  HandleDeleteOrdersById,
+  HandleOrderTotalSales,
+  HandleOrderCount,
+  HandleGetUserOrders,
+} = require("../controllers/order");
+
+router.route(`/`).get(HandleGetAllOrders).post(HandleAddNewOrders);
+
+router.route("/:id").get(HandleGetOrdersById);
+
+router.route("/:id").put(HandleUpdateOrdersById).delete(HandleDeleteOrdersById);
+
+router.route("/get/totalSales").get(HandleOrderTotalSales);
+
+router.route("/get/count").get(HandleOrderCount);
+
+router.route("/get/userorders/:userId").get(HandleGetUserOrders);
 
 module.exports = router;

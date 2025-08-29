@@ -8,7 +8,7 @@ async function HandleGetAllProducts(req, res) {
     if (req.query.categories) {
       filter = { category: req.query.categories.split(",") };
     }
-    const allProducts = await Product.find(filter).populate("category");
+    const allProducts = await Product.find(filter).populate("categoryId");
     if (!allProducts) {
       res.status(500).json({ success: false });
     }
@@ -23,7 +23,7 @@ async function HandleGetAllProducts(req, res) {
 
 async function HandleCreateNewProduct(req, res) {
   try {
-    const category = await Category.findById(req.body.category);
+    const category = await Category.findById(req.body.categoryId);
     if (!category) return res.status(400).send("Invalid category");
     const product = {
       name: req.body.name,
@@ -32,7 +32,7 @@ async function HandleCreateNewProduct(req, res) {
       image: req.body.image,
       brand: req.body.brand,
       price: req.body.price,
-      category: req.body.category,
+      categoryId: req.body.categoryId,
       countInStock: req.body.countInStock,
       rating: req.body.rating,
       numReviews: req.body.numReviews,
@@ -61,7 +61,7 @@ async function HandleUpdateProductById(req, res) {
     return res.status(400).send("Invalid Product Id");
   }
 
-  const category = await Category.findById(req.body.category);
+  const category = await Category.findById(req.body.categoryId);
   if (!category) return res.status(400).send("Invalid category");
 
   const product = await Product.findByIdAndUpdate(
@@ -73,7 +73,7 @@ async function HandleUpdateProductById(req, res) {
       image: req.body.image,
       brand: req.body.brand,
       price: req.body.price,
-      category: req.body.category,
+      categoryId: req.body.categoryId,
       countInStock: req.body.countInStock,
       rating: req.body.rating,
       numReviews: req.body.numReviews,

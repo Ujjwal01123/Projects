@@ -30,7 +30,7 @@ const productSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  category: {
+  categoryId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "category",
     required: true,
@@ -67,6 +67,6 @@ productSchema.set("toJSON", {
   virtuals: true,
 });
 
-const Product = mongoose.model("products", productSchema);
+const Product = mongoose.model("Products", productSchema);
 
 module.exports = Product;
