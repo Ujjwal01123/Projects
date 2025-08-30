@@ -3,23 +3,27 @@ const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
+    required: [true, "Name is required"],
   },
   email: {
     type: String,
-    required: true,
+    required: [true, "Email is required"],
   },
   gender: {
     type: String,
-    required: true,
+    required: [true, "Gender is required"],
+    enum: {
+      values: ["male", "female", "other"],
+      message: "Invalid gender. Allowed genders are: male, female, other",
+    },
   },
   passwordHash: {
     type: String,
-    required: true,
+    required: [true, "Password is required"],
   },
   phone: {
     type: String,
-    required: true,
+    required: [true, "Phone number is required"],
   },
   isAdmin: {
     type: Boolean,

@@ -10,40 +10,65 @@ async function HandleGetUserList(req, res) {
 }
 
 async function HandleRegisterNewUser(req, res) {
-  let user = {
-    name: req.body.name,
-    email: req.body.email,
-    gender: req.body.gender,
-    color: req.body.color,
-    passwordHash: bcrypt.hashSync(req.body.password, 10),
-    phone: req.body.phone,
-    isAdmin: req.body.isAdmin,
-    appartment: req.body.appartment,
-    zip: req.body.zip,
-    city: req.body.city,
-    country: req.body.country,
-  };
-  // check if email exists
-  const existingEmail = await User.findOne({ email: req.body.email });
-  // check if phone exists
-  const existingPhone = await User.findOne({ phone: req.body.phone });
+  try {
+    let user = {
+      name: req.body.name,
+      email: req.body.email,
+      gender: req.body.gender,
+      color: req.body.color,
+      passwordHash: bcrypt.hashSync(req.body.password, 10),
+      phone: req.body.phone,
+      isAdmin: req.body.isAdmin,
+      appartment: req.body.appartment,
+      zip: req.body.zip,
+      city: req.body.city,
+      country: req.body.country,
+    };
 
-  if (existingEmail && existingPhone) {
-    return res.status(400).json({
-      message: "Both email and phone already exist, Please login....",
+    // check if email exists
+    const existingEmail = await User.findOne({ email: req.body.email });
+    // check if phone exists
+    const existingPhone = await User.findOne({ phone: req.body.phone });
+
+    if (existingEmail && existingPhone) {
+      return res.status(400).json({
+        message: "Both email and phone already exist, Please login....",
+      });
+    } else if (existingEmail) {
+      return res
+        .status(400)
+        .json({ message: "Email already exists, Please login...." });
+    } else if (existingPhone) {
+      return res
+        .status(400)
+        .json({ message: "Phone number already exists, Please login...." });
+    }
+
+    // create user
+    const createdUser = await User.create(user);
+
+    if (!createdUser) {
+      return res.status(500).json({ message: "The user cannot be created!" });
+    }
+
+    res
+      .status(201)
+      .send({ user: createdUser, msg: "User created successfully..." });
+  } catch (error) {
+    if (error.name === "ValidationError") {
+      // collect validation messages from schema
+      const messages = Object.values(error.errors).map((err) => err.message);
+
+      return res.status(400).json({
+        error_messages: messages,
+      });
+    }
+
+    // other errors
+    res.status(500).json({
+      message: "Something went wrong",
+      error: error.message,
     });
-  } else if (existingEmail) {
-    return res
-      .status(400)
-      .json({ message: "Email already exists, Please login...." });
-  } else if (existingPhone) {
-    return res
-      .status(400)
-      .json({ message: "Phone number already exists, Please login...." });
-  } else {
-    await User.create(user);
-    if (!user) return res.status(404).send("the user cannot be created!");
-    res.status(201).send({ user, msg: "user created successfully..." });
   }
 }
 

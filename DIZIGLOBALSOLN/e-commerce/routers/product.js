@@ -1,26 +1,18 @@
 const express = require("express");
 const router = express.Router();
+const productController = require("../controllers/product");
 
-const {
-  HandleGetAllProducts,
-  HandleCreateNewProduct,
-  HandleGetProductById,
-  HandleUpdateProductById,
-  HandleDeleteProductById,
-  HandleGetProductCount,
-  HandleGetFeaturedProducts,
-} = require("../controllers/product");
+// Create
+router.post("/", productController.createProduct);
 
-router.route(`/`).get(HandleGetAllProducts).post(HandleCreateNewProduct);
+// Read
+router.get("/", productController.getProducts);
+router.get("/:id", productController.getProductById);
 
-router
-  .route("/:id")
-  .get(HandleGetProductById)
-  .put(HandleUpdateProductById)
-  .delete(HandleDeleteProductById);
+// Update
+router.put("/:id", productController.updateProduct);
 
-router.route("/get/count").get(HandleGetProductCount);
-
-router.route("/get/featured/:count").get(HandleGetFeaturedProducts);
+// Delete
+router.delete("/:id", productController.deleteProduct);
 
 module.exports = router;
