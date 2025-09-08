@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+
+
+/* Navigation Bar */
+
+#nav {
+    top: 0;
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar Logo */
+
+#nav img {
+    width: 160px;
+    height: 35px;
+    box-shadow: 0px 8px 15px #0000004e;
+}
+
+/* Naviagtion Bar Search Bar */
+
+#nav #search {
+    border: 1.5px solid #ccd0d3;
+    height: 41px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+#search span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#nav #search img {
+    margin: 10px;
+    width: 23px;
+    height: 23px;
+    box-shadow: none;
+}
+
+#nav #search input {
+    border: none;
+    width: 352px;
+    height: 39px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.search::placeholder {
+    color: #95abbd;
+    font-size: 15px;
+}
+
+/* Animation in Search Bar */
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #ffcc00;
+    margin-left: 2px;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Naviation Bar : Contact */
+
+#contact {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contact #number,
+#contact #mail {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contact #number img,
+#contact #mail img {
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+}
+
+#contact #number p,
+#contact #mail p {
+    font-size: 13px;
+}
+
+#contact #mail {
+    width: 160px;
+}
+
+#circle {
+    width: 32px;
+    height: 32px;
+    background-color: #CE3C3D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#circle:hover {
+    transform: scale(1.1);
+}
+
+#circle img {
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+    transform: rotateZ(20deg);
+}
+
+#suggestionsBox {
+    position: relative;
+    top: 0%;
+    min-height: fit-content;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    background: #f3f2f2;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    display: block;
+}
+
+#suggestionsBox div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#suggestionsBox div:hover {
+    background: #f0f0f0;
+}
+
+/* search box ended */
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Page Header */
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-title {
+    margin-top: 10%;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.page-date {
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 630px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover .hero-img {
+    transform: scale(1.05);
+}
+
+/* Browse Section */
+.browse-section {
+    margin-bottom: 30px;
+}
+
+.browse-text {
+    font-size: 16px;
+    color: #4B5563;
+    font-weight: 500;
+}
+
+.browse-highlight {
+    color: #1F2937;
+    font-weight: 600;
+}
+
+/* Content Section */
+.content-section {
+    margin-bottom: 60px;
+}
+
+.content-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.content-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1F2937;
+}
+
+/* Footer */
+#fotter {
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px;
+    background: #f8f9fa;
+    border-top: 2px solid #CE3C3D;
+
+}
+
+#link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+#link h3 {
+    color: #364153;
+    font-size: 16px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #364153;
+}
+
+#copyright span {
+    font-weight: 600;
+    color: #364153;
+}
+
+@media (min-width: 1400px) {
+    #category-card {
+        justify-content: center;
+    }
+
+    #packages-card {
+        justify-content: center;
+    }
+
+    #destination-slider,
+    #blog-slider {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    #holiday-category,
+    #holiday-packages,
+    #populer-destination,
+    #travel-blog {
+        padding: 0 80px;
+    }
+
+    #fotter {
+        padding: 40px 80px;
+    }
+
+    .card {
+        flex: 0 0 280px;
+    }
+
+    .pack-card {
+        flex: 0 0 260px;
+    }
+
+    .destination-card,
+    .blog-card {
+        flex: 0 0 250px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #nav #search {
+        width: 390px;
+    }
+
+    section {
+        padding: 0 15px;
+    }
+
+    .image img {
+        width: 97%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #nav {
+        justify-content: space-around;
+        gap: 60px;
+    }
+
+    #nav img {
+        margin: 20px;
+    }
+
+    #nav #search {
+        width: 450px;
+    }
+
+    #contact {
+        visibility: hidden;
+    }
+
+    #fotter {
+        gap: 10px;
+    }
+
+    #link h3 {
+        font-size: 14px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .icon img {
+        width: 15px;
+        height: 15px;
+    }
+
+    #copyright {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 426px) {
+    #nav {
+        height: 7vh;
+    }
+
+    #nav img {
+        width: 115px;
+        height: 25px;
+    }
+
+    #nav #search {
+        width: 170px;
+    }
+
+    #nav #search input {
+        width: 125px;
+    }
+
+    #fotter {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 376px) {
+
+    #nav #search {
+        width: 150px;
+    }
+
+    #nav #search input {
+        width: 105px;
+    }
+
+    .heading {
+        margin-top: 49px;
+    }
+
+    .heading h1 {
+        margin-top: 9px;
+    }
+
+    .image {
+        margin-top: 10px;
+    }
+
+    .description h2,
+    .description h3 {
+        font-size: 15px;
+    }
+
+    #link h3 {
+        width: 110px;
+        font-size: 15px;
+    }
+
+    #copyright {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    #nav {
+        gap: 5px;
+    }
+
+    #link {
+        gap: 10px;
+    }
+
+    #link h3 {
+        font-size: 14px;
+    }
+
+    #copyright {
+        width: 320px;
+        font-size: 13px;
+    }
+}
